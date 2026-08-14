@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@import url('variables.css');
+
+/* ========== Inicio das Conficurações Globais ==========*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid re;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    font-family: var(--fonte-titulo);
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-texto);
+}
+/* ========== Fim das Conficurações Globais ==========*/
+
+
+/* ========== Inicio do Menu da pagina ==========*/
+header{
+
+    background-color: var(--cor-branca);
+    border-bottom: 2px solid var(--cor-borda);
+    padding: 10px 0;
+}
+
+.menu-principal{
+    width: 100%;
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+}
+
+/* ---------- inicio do logo do menu ----------*/
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto);
+    flex: 0 0 100%;
+    gap: 5px;
+}
+
+.logo-img{
+    max-width: 70px;
+}
+
+.logo-txt{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.txt-lar{
+    color: var(--cor-primaria);
+}
+
+.espaco{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+/* ---------- fim do logo do menu ----------*/
+
+/* ---------- inicio do botão ----------*/
+.botao-destino a{
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #0000003d;
+}
+/* ---------- fim do botão ----------*/
+/* ========== Fim do Menu da pagina ==========*/
+
+
+main {
+    height: 100px;
+}
+
+
+/* ========== Inivio do Rodape da pagina ==========*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
+    color: var( --cor-texto-rodape);
+    gap: 20px;
+    border-top: 2px solid var(--cor-borda);
+}
+
+.rodape{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 95%;
+    margin: 20px 0 10px 0;
+    padding: 5px;
+}
+
+/* ---------- inicio do logo do rodape ----------*/
+.logo-rodape{
+    flex: 0 0 100%;
+    color: var(--cor-branca);
+    text-align: justify;
+    max-width: 300px;
+    margin: auto;
+}
+
+.logo-rod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.rede ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.rede img{
+    max-width: 40px;
+}
+/* ---------- fim do logo do rodape ----------*/
+
+/* ---------- inicio da navegação do rodape ---------- */
+/* ---------- fim da navegação do rodape ---------- */
+
+
+/* ---------- inicio das ofertas do rodape ---------- */
+.ofertas{
+    flex: 0 0 100%;
+    margin: auto;
+    max-width: 350px;
+}
+
+.ofertas h3{
+    text-align: center;
+}
+
+.ofertas p{
+    text-align: justify;
+}
+
+#imail {
+    margin: 10px 10px 0 0;
+    padding: 8px 5px;
+    outline: none;
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+.botao-inscrever{
+    color: var(--cor-branca);
+    background-color: var(--cor-primaria);
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+/* ---------- fim das ofertas do rodape ---------- */
+
+/* ---------- inicio do copy do rodape ---------- */
+.rodape-copy{
+    max-width: 95%;
+    border-top: 2px solid #7081808e;
+    text-align: center;
+    padding: 15px 0;
+    color: var(--cor-texto-rodape);
+}
+
+.rodape-copy a{
+    color: var(--cor-texto-rodape);
+    border-bottom: 1px solid white
+}
+/* ---------- fim da no copy do rodape ---------- */
+/* ========== Fim do Rodape da pagina ========== */
