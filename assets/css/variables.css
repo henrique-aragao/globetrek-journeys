@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-primaria: #F97316;
+    --cor-secundaria: #0F766E;
+    --cor-fundo: #f2f3f5;
+    --cor-branca: #ffffff;
+    --cor-borda: #708180;
+    --cor-texto: #0d665f;
+    --cor-texto-rodape: #d2d4d4;
+
+    --fonte-titulo: 'Raleway', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
