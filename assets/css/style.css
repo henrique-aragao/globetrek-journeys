@@ -30,15 +30,14 @@ h1, h2, h3{
 body{
     background-color: var(--cor-fundo);
     font-family: var(--fonte-texto);
+    color: var(--fonte-texto);
 }
 /* ========== Fim das Conficurações Globais ==========*/
 
 
 /* ========== Inicio do Menu da pagina ==========*/
 header{
-
     background-color: var(--cor-branca);
-    border-bottom: 2px solid var(--cor-borda);
     padding: 10px 0;
 }
 
@@ -57,7 +56,6 @@ header{
     align-items: center;
     justify-content: center;
     color: var(--cor-texto);
-    flex: 0 0 100%;
     gap: 5px;
 }
 
@@ -93,9 +91,159 @@ header{
 /* ========== Fim do Menu da pagina ==========*/
 
 
-main {
-    height: 100px;
+/* ========== Inicio do conteudo da pagina inicio ==========*/
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: 30px 0;
+    gap: 50px;
 }
+
+/* ---------- inicio da apresentação ----------*/
+.apresentacao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.apresentacao h1{
+    color: var(--cor-texto);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+}
+
+.mundo{
+    font-weight: 800;
+    color: var(--cor-primaria);
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+}
+
+.apresentacao p{
+    font-size: 1.1rem;
+}
+
+.parag{
+    margin: 20px 0 30px 0;
+}
+
+/* Desenho do rastro */
+.trajeto{
+    margin: 20px 0 10px 0;
+    width: 100%;
+    min-height: 100px;
+    max-width: 90%;
+}
+
+/* Desenho do rastro */
+
+.anos{
+    background-color: var(--cor-branca);
+    box-shadow: 5px 5px 10px #0000001f;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    
+}
+
+.anos-img {
+    background-color: var(--cor-branca);
+    padding: 8px;
+    border: 3px solid #cccbcb ;
+    border-right: 3px solid var(--cor-primaria);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #0000002a;
+}
+
+.anos-img img{
+    max-width: 60px;
+}
+
+.anos-txt p{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 500;
+    gap: 5px;
+}
+
+.idade{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--cor-texto);
+}
+/* ---------- fim da apresentação ----------*/
+
+
+/* ---------- inicio da timeline ----------*/
+.evento{
+    background-color: var(--cor-branca);
+    margin: 20px 0;
+    box-shadow: 5px 5px 10px #00000044;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.evento-conteudo{
+    padding: 10px;
+    line-height: 1.3;
+}
+
+.evento-conteudo span{
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.evento-conteudo h2{
+    color: var(--cor-texto);
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.evento-conteudo p{
+    color: var(--cor-txt);
+    font-weight: 500;
+}
+/* ---------- fim da timeline ----------*/
+
+/* ---------- inicio da botão ----------*/
+.botao-des a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 90%;
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    gap: 10px;
+    color: var(--cor-branca);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #00000038;
+    transition: background-color .5s, transform .5s, box-shadow .4s;
+}
+
+.botao-des img{
+    max-width: 30px;
+}
+
+.botao-des a:focus{
+    background-color: var(--cor-primaria-hover);
+    box-shadow: none;
+    transform: translateY(5px) scale(.95);
+}
+/* ---------- fim da botão ----------*/
+/* ========== Fim do conteudo da pagina inicio ==========*/
 
 
 /* ========== Inivio do Rodape da pagina ==========*/
@@ -104,7 +252,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-fundo-rodape);
     color: var( --cor-texto-rodape);
     gap: 20px;
     border-top: 2px solid var(--cor-borda);
@@ -115,7 +263,7 @@ footer{
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     max-width: 95%;
     margin: 20px 0 10px 0;
     padding: 5px;
@@ -151,13 +299,16 @@ footer{
 /* ---------- fim do logo do rodape ----------*/
 
 /* ---------- inicio da navegação do rodape ---------- */
+.naveg a{
+    color: var(--cor-texto-rodape);
+}
 /* ---------- fim da navegação do rodape ---------- */
 
 
 /* ---------- inicio das ofertas do rodape ---------- */
 .ofertas{
     flex: 0 0 100%;
-    margin: auto;
+    margin: 0 auto;
     max-width: 350px;
 }
 
@@ -182,6 +333,11 @@ footer{
     background-color: var(--cor-primaria);
     padding: 6px 10px;
     border-radius: 10px;
+}
+
+.caixa{
+    margin-top: 10px;
+    justify-self: center;
 }
 /* ---------- fim das ofertas do rodape ---------- */
 
