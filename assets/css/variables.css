@@ -2,11 +2,17 @@
 
 :root{
     --cor-primaria: #F97316;
+    --cor-primaria-hover: #d16213;
     --cor-secundaria: #0F766E;
+
+    --cor-fundo-rodape: #0a5750;
     --cor-fundo: #f2f3f5;
+
     --cor-branca: #ffffff;
+    
     --cor-borda: #708180;
-    --cor-texto: #0d665f;
+    --cor-texto: #0c554f;
+    --cor-txt: #072e2b;
     --cor-texto-rodape: #d2d4d4;
 
     --fonte-titulo: 'Raleway', sans-serif;
