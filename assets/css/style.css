@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('variables.css');
 
-/* ========== Inicio das Conficurações Globais ==========*/
+/* ========== Inicio do estilo global ========== */
 *{
     margin: 0;
     padding: 0;
@@ -9,429 +9,165 @@
     outline: 1px solid re;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    list-style: none;
-}
-
 a{
     text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+ul{
+    list-style: none;
 }
 
 h1, h2, h3{
     font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
 }
 
 body{
     background-color: var(--cor-fundo);
     font-family: var(--fonte-texto);
-    color: var(--fonte-texto);
 }
-/* ========== Fim das Conficurações Globais ==========*/
+/* ========== Fim do estilo global ========== */
 
-
-/* ========== Inicio do Menu da pagina ==========*/
-header{
-    background-color: var(--cor-branca);
-    padding: 10px 0;
-}
-
-.menu-principal{
-    width: 100%;
-    max-width: 95%;
+/* ========== Inicio do menu ========== */
+#container-menu{
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--cor-branca);
+    border-bottom: 1px solid var(--cor-borda);
 }
 
-/* ---------- inicio do logo do menu ----------*/
 .logo{
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--cor-texto);
     gap: 5px;
+    font-size: 1.7rem;
+    color: var(--cor-secundaria);
+    flex: 1;
 }
 
-.logo-img{
-    max-width: 70px;
+.logo-img img{
+    max-width: 75px;
 }
 
-.logo-txt{
-    font-size: 1.5rem;
-    font-weight: 700;
+.globe{
+    font-weight: 900;
 }
 
-.txt-lar{
+.globe span{
     color: var(--cor-primaria);
 }
 
-.espaco{
-    font-size: 1rem;
-    font-weight: 500;
+.jorn{
     letter-spacing: 5px;
-}
-/* ---------- fim do logo do menu ----------*/
-
-/* ---------- inicio do botão ----------*/
-.botao-destino a{
-    background-color: var(--cor-primaria);
-    color: var(--cor-branca);
-    padding: 8px 15px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #0000003d;
-}
-/* ---------- fim do botão ----------*/
-/* ========== Fim do Menu da pagina ==========*/
-
-
-/* ========== Inicio do conteudo da pagina inicio ==========*/
-#container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-    margin: 30px 0;
-    gap: 50px;
-}
-
-/* ---------- inicio da apresentação ----------*/
-.apresentacao {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-.apresentacao h1{
-    color: var(--cor-texto);
-    font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 5px;
-}
-
-.mundo{
-    font-weight: 800;
-    color: var(--cor-primaria);
-    letter-spacing: 1px;
-    font-size: 2.2rem;
-}
-
-.apresentacao p{
     font-size: 1.1rem;
 }
 
-.parag{
-    margin: 20px 0 30px 0;
-}
-
-/* Desenho do rastro */
-.trajeto{
-    display: flex;
-    position: relative;
-    margin: 20px 0 10px 0;
+#btn-menu{
+    display: inline-block;
     width: 100%;
-    max-width: 100%;
-    height: 100px;
-    max-width: 90%;
-}
-
-.aviao{
-    position: absolute;
-    left: 90%;
-    top: 25%;
-    max-width: 40px;
-    transform: rotate(-10deg);
-}
-
-svg{
-    position: absolute;
-    left: -5%;
-    top: 20%;
-}
-
-svg path{
-    stroke: var(--cor-primaria);
-}
-/* Desenho do rastro */
-
-.anos{
-    background-color: var(--cor-branca);
-    box-shadow: 5px 5px 10px #0000001f;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 20px;
-    
-}
-
-.anos-img {
-    background-color: var(--cor-branca);
-    padding: 8px;
-    border: 3px solid #cccbcb ;
-    border-right: 3px solid var(--cor-primaria);
-    border-radius: 50%;
-    box-shadow: 5px 5px 10px #0000002a;
-}
-
-.anos-img img{
-    max-width: 60px;
-}
-
-.anos-txt p{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    max-width: 50px;
+    height: 50px;
+    font-size: 40px;
+    line-height: 1;
     font-weight: 500;
-    gap: 5px;
-}
-
-.idade{
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--cor-texto);
-}
-/* ---------- fim da apresentação ----------*/
-
-
-/* ---------- inicio da timeline ----------*/
-.timeline{
-    position: relative;
-}
-
-.timeline::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 15px;
-    width: 3px;
-    background-image: linear-gradient(to bottom, var(--cor-secundaria), var(--cor-primaria), var(--cor-secundaria), var(--cor-primaria), var(--cor-secundaria));
-    z-index: 0;
-}
-
-.evento{
-    position: relative;
-    background-color: var(--cor-branca);
-    margin: 20px 0 20px 50px;
-    box-shadow: 5px 5px 10px #00000044;
-    max-width: 250px;
-    border-radius: 10px;
-}
-
-.evento::before{
-    content: "";
-    position: absolute;
-
-    left: -44px;
-    top: 35%;
-
-    width: 20px;
-    height: 20px;
-
-    background-color: var(--cor-primaria);
-    border-radius: 50%;
-
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.evento::after{
-    content: "";
-    position: absolute;
-
-    top: 35%;
-    left: -34px;
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-    background-color: var(--cor-branca);
-
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.evento:nth-child(odd)::before {
-    background-color: var(--cor-primaria);
-}
-
-.evento:nth-child(even)::before {
-    background-color: var(--cor-secundaria);
-}
-
-
-.evento-conteudo{
-    padding: 10px;
-    line-height: 1.3;
-}
-
-.evento-conteudo span{
     color: var(--cor-primaria);
-    font-size: 1.5rem;
-    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    border-radius: 50px;
+    margin: 5px 5px 0px 0px;
+    transition: all .7s ease;
 }
 
-.evento-conteudo h2{
-    color: var(--cor-texto);
-    font-weight: 800;
-    font-size: 1.3rem;
-    margin: 10px 0;
+#btn-menu.ativo{
+    border-radius: 10px;
+    transform: rotate(360deg);
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
 }
 
-.evento-conteudo p{
-    color: var(--cor-txt);
-    font-weight: 500;
+.menu{
+    display: none;
 }
-/* ---------- fim da timeline ----------*/
 
-/* ---------- inicio da botão ----------*/
-.botao-des a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.menu.aberto{
+    text-align: center;
+    display: inline-block;
+    flex:0 0 100%;
     width: 100%;
+}
+
+.menu ul{
+    display: flex;
+    gap: 10px;
+    flex-flow: column wrap;
+}
+
+.menu li{
+    display: flex;
+}
+
+.menu a{
+    border-top: 1px solid var(--cor-borda);
+    width: 100%;
+    padding: 10px;
+    color: var(--cor-texto);
+    transition: color .3s;
+}
+
+.menu a:active{
+    color: var(--cor-primaria);
+}
+
+a.borda{
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+a.btn-destino{
+    border: none;
+    margin: 10px auto;
     max-width: 90%;
     background-color: var(--cor-primaria);
-    padding: 10px;
-    gap: 10px;
     color: var(--cor-branca);
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px #00000038;
-    transition: background-color .5s, transform .5s, box-shadow .4s;
+    border-radius: 10px;
+    padding: 16px 6px;
+    box-shadow: 5px 5px 10px #0000003f;
+    transition: transform .1s, background-color .1s, box-shadow .1s;
 }
 
-.botao-des img{
-    max-width: 30px;
+a.ativ{
+    color: var(--cor-primaria);
 }
 
-.botao-des a:focus{
+a.btn-destino:active{
+    transform: translateY(5px) scale(.90);
     background-color: var(--cor-primaria-hover);
     box-shadow: none;
-    transform: translateY(5px) scale(.95);
 }
-/* ---------- fim da botão ----------*/
-/* ========== Fim do conteudo da pagina inicio ==========*/
+/* ========== Fim do menu ========== */
 
-
-/* ========== Inivio do Rodape da pagina ==========*/
-footer{
+/* ========== Inicio do conteudo da pagina inicio ========== */
+.jornada h1{
+    max-width: 240px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--cor-fundo-rodape);
-    color: var( --cor-texto-rodape);
-    gap: 20px;
-    border-top: 2px solid var(--cor-borda);
+    margin: 20px auto;
+    flex-flow: column;
 }
-
-.rodape{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 95%;
-    margin: 20px 0 10px 0;
-    padding: 5px;
-}
-
-/* ---------- inicio do logo do rodape ----------*/
-.logo-rodape{
-    flex: 0 0 100%;
-    color: var(--cor-branca);
-    text-align: justify;
-    max-width: 300px;
-    margin: auto;
-}
-
-.logo-rod{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 5px;
-}
-
-.rede ul{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px 0;
-}
-
-.rede img{
-    max-width: 40px;
-}
-/* ---------- fim do logo do rodape ----------*/
-
-/* ---------- inicio da navegação do rodape ---------- */
-.naveg a{
-    color: var(--cor-texto-rodape);
-}
-/* ---------- fim da navegação do rodape ---------- */
-
-
-/* ---------- inicio das ofertas do rodape ---------- */
-.ofertas{
-    flex: 0 0 100%;
-    margin: 0 auto;
-    max-width: 350px;
-}
-
-.ofertas h3{
-    text-align: center;
-}
-
-.ofertas p{
-    text-align: justify;
-}
-
-#imail {
-    margin: 10px 10px 0 0;
-    padding: 8px 5px;
-    outline: none;
-    border: 2px solid var(--cor-borda);
-    border-radius: 10px;
-}
-
-.botao-inscrever{
-    color: var(--cor-branca);
-    background-color: var(--cor-primaria);
-    padding: 6px 10px;
-    border-radius: 10px;
-}
-
-.caixa{
-    margin-top: 10px;
-    justify-self: center;
-}
-/* ---------- fim das ofertas do rodape ---------- */
-
-/* ---------- inicio do copy do rodape ---------- */
-.rodape-copy{
-    max-width: 95%;
-    border-top: 2px solid #7081808e;
-    text-align: center;
-    padding: 15px 0;
-    color: var(--cor-texto-rodape);
-}
-
-.rodape-copy a{
-    color: var(--cor-texto-rodape);
-    border-bottom: 1px solid white
-}
-/* ---------- fim da no copy do rodape ---------- */
-/* ========== Fim do Rodape da pagina ========== */
+/* ========== Fim do conteudo da pagina inicio ========== */
