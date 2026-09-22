@@ -30,14 +30,33 @@ ul{
     list-style: none;
 }
 
+h1{
+    font-size: 1.9rem;
+    font-weight: 900;
+}
+
 h1, h2, h3{
     font-family: var(--fonte-titulo);
     color: var(--cor-texto);
 }
 
+p{
+    font-size: 1.1rem;
+    color: var(--cor-txt);
+}
+
 body{
     background-color: var(--cor-fundo);
     font-family: var(--fonte-texto);
+}
+
+#container-conteudo{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
 }
 /* ========== Fim do estilo global ========== */
 
@@ -54,19 +73,24 @@ body{
 }
 
 .logo{
+    width: 100%;
+    max-width: 220px;
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 1.7rem;
+    flex: 3;
+}
+
+.logo-txt p{
     color: var(--cor-secundaria);
-    flex: 1;
+    font-size: 1.5rem;
 }
 
 .logo-img img{
-    max-width: 75px;
+    max-width: 65px;
 }
 
-.globe{
+p.globe{
     font-weight: 900;
 }
 
@@ -74,9 +98,16 @@ body{
     color: var(--cor-primaria);
 }
 
-.jorn{
-    letter-spacing: 5px;
+p.jorn{
+    font-weight: 400;
+    letter-spacing: 4px;
     font-size: 1.1rem;
+}
+
+.bt-me{
+    display: flex;
+    justify-content: right;
+    flex: 1;
 }
 
 #btn-menu{
@@ -100,6 +131,9 @@ body{
     transform: rotate(360deg);
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
+    max-width: 45px;
+    height: 45px;
+    font-size: 35px;
 }
 
 .menu{
@@ -128,7 +162,8 @@ body{
     width: 100%;
     padding: 10px;
     color: var(--cor-texto);
-    transition: color .3s;
+    transition: color .2s;
+    cursor: pointer;
 }
 
 .menu a:active{
@@ -150,6 +185,7 @@ a.btn-destino{
     padding: 16px 6px;
     box-shadow: 5px 5px 10px #0000003f;
     transition: transform .1s, background-color .1s, box-shadow .1s;
+    cursor: pointer;
 }
 
 a.ativ{
@@ -160,14 +196,185 @@ a.btn-destino:active{
     transform: translateY(5px) scale(.90);
     background-color: var(--cor-primaria-hover);
     box-shadow: none;
+    color: var(--cor-branca);
 }
 /* ========== Fim do menu ========== */
+
 
 /* ========== Inicio do conteudo da pagina inicio ========== */
 .jornada h1{
     max-width: 240px;
     display: flex;
-    margin: 20px auto;
+    margin: 10px auto;
     flex-flow: column;
+    letter-spacing: 1px;
 }
+
+.jornada h1 > span{
+    color: var(--cor-primaria);
+}
+
+.anos{
+    margin: auto;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000023;
+    padding: 10px;
+    gap: 10px;
+}
+
+.anos-img {
+    border-radius: 50%;
+    padding: 10px;
+    border-right: 3px solid var(--cor-primaria);
+    border-top: 2px dashed var(--cor-primaria);
+    border-bottom: 2px dashed var(--cor-primaria);
+}
+.anos-img img{
+    border-radius: 50%;
+    max-width: 64px;
+}
+
+.anos-txt p{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.anos-txt span{
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    font-weight: 900;
+}
+
+/* ---------- Inicio da timeline ---------- */
+.timeline{
+    position: relative;
+    width: 100%;
+    padding: 5px;
+}
+
+.cards-timeline{
+    position: relative;
+    display: grid;
+    grid-template-columns: 24px minmax(0, 300px);
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.cards-timeline::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 4px;
+    background-image: linear-gradient(to bottom, var(--cor-primaria), var(--cor-secundaria), var(--cor-primaria), var(--cor-secundaria), var(--cor-primaria));
+    border-radius: 60%;
+}
+
+.evento{
+    grid-column: 2;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    box-shadow: 5px 5px 10px #0000001f;
+    border: 1px solid var(--cor-borda);
+}
+
+.evento-marcador {
+    grid-column: 1;
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--cor-branca);
+    border: 5px solid var(--cor-borda);
+    z-index: 2;
+}
+
+.evento-txt{
+    padding: 10px;
+    font-weight: 500;
+}
+
+.evento-txt span{
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.evento-txt h2{
+    margin: 10px 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.evento-img{
+    width: 100%;
+    background-color: #000000;
+    border-radius: 0 0 10px 10px;
+}
+
+.evento-img img{
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    opacity: .8;
+}
+
+/* ---------- Inicio do botão destinos ---------- */
+.btn-des a{
+    margin: 50px auto;
+    max-width: 300px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    border-radius: 15px;
+    transition: background-color .1s, transform .1s;
+}
+
+.btn-des a:active{
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(5px) scale(.90);
+}
+
+.btn-des img{
+    transform: rotate(45deg);
+    max-width: 40px;
+}
+/* ---------- Fim do botão destinos ---------- */
+/* ---------- Fim da timeline ---------- */
+
+/* ---------- Inicio da voltar ao topo ---------- */
+.topo {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--cor-branca);
+    background-color: #0f766da6;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+/* ---------- Fim da voltar ao topo ---------- */
 /* ========== Fim do conteudo da pagina inicio ========== */
