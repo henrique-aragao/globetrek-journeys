@@ -20,7 +20,7 @@
                 </div>
             </div>
             
-            <button id="btn-menu" onclick="menu()">☰</button>
+            <div class="bt-me"><button id="btn-menu" onclick="menu()">☰</button></div>
 
             <nav class="menu" id="prin-menu" aria-label="Menu Principal">
                 <ul>
@@ -29,28 +29,99 @@
                     <li><a href="#!">Sobre Nós</a></li>
                     <li><a href="#!">Blog</a></li>
                     <li><a href="#!" class="borda">Contato</a></li>
-                    <li><a href="#!" class="btn-destino">Ver Proximos Destinos</a></li>
+                    <li><a href="pages/destino.html" class="btn-destino">Ver Proximos Destinos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container-conteudo">
+    <main id="container-conteudo">
         <section class="jornada">
-            <h1>Nossa jornada <span>pelo mundo</span></h1>
+            <h1>Nossa Jornada <span>pelo Mundo</span></h1>
             <p>Mais de 15 anos explorando o mundo, conectando pessoas a culturas únicas e criado memórias que dura para sempre.</p>
 
-            <div>
-                <div>
-                    <img src="" alt="">
+            <div class="anos">
+                <div class="anos-img">
+                    <img src="assets/icons/globo-terrestre.png" alt="">
                 </div>
-                <div>
+                <div class="anos-txt">
                     <p>Mais de <span>15 anos</span> de história e aventuras</p>
                 </div>
             </div>
         </section>
 
-        <section></section>
+        <section class="timeline">
+            <div class="cards-timeline">
+                <div class="evento-marcador"></div>
+                <div class="evento">
+                    <div class="evento-txt">
+                        <span>2009</span>
+                        <h2>O Início da Aventura</h2>
+                        <p>A GlobeTrek nasceu com o sonho de mostrar o mundo de uma forma diferente, autêntica e transformadora.</p>
+                    </div>
+
+                    <div class="evento-img">
+                        <img src="assets/img/incio-jornada.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="evento-marcador"></div>
+                <div class="evento">
+                    <div class="evento-txt">
+                        <span>2012</span>
+                        <h2>Novos Horizontes</h2>
+                        <p>Expandimos nossos destinos e criamos experiêcias culturais exclusivas em diferentes continentes.</p>
+                    </div>
+
+                    <div class="evento-img">
+                        <img src="assets/img/horizontes.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="evento-marcador"></div>
+                <div class="evento">
+                    <div class="evento-txt">
+                        <span>2016</span>
+                        <h2>Comunidade Global</h2>
+                        <p>Milhares de viajantes já fizeram parte da nossa comunidade, compartilhabdo histórias e inspirando novas jornadas.</p>
+                    </div>
+
+                    <div class="evento-img">
+                        <img src="assets/img/global.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="evento-marcador"></div>
+                <div class="evento">
+                    <div class="evento-txt">
+                        <span>2020</span>
+                        <h2>Superando Desafios</h2>
+                        <p>Transformamos desafios em oportunidades e nos reinventamos para continuar conectando pessoas.</p>
+                    </div>
+
+                    <div class="evento-img">
+                        <img src="assets/img/desafios.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="evento-marcador"></div>
+                <div class="evento">
+                    <div class="evento-txt">
+                        <span>2024</span>
+                        <h2>O Futuro é Agora</h2>
+                        <p>Novos destinos, novas experiências e o mesmo propósito: transformar viagens em memórias inesqueciveis.</p>
+                    </div>
+
+                    <div class="evento-img">
+                        <img src="assets/img/futuro.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-des"><a href="pages/destino.html">Ver Proximos Destinos <img src="assets/icons/decolar-branco.png" alt=""></a></div>
+
+            <button class="topo"  onclick="voltarTopo()" aria-label="Voltar ao topo">></button>
+        </section>
     </main>
 
     <footer></footer>
