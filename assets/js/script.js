@@ -37,3 +37,7 @@ function voltarTopo() {
 
 window.addEventListener("scroll", mostrarBotaoTopo);
 // Fim do script do votar ao topo
+
+function oferta(){
+    window.alert('Logo, logo você receberá ofertas exclusivas para novas viagens! ✈️')
+}
