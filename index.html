@@ -24,8 +24,8 @@
 
             <nav class="menu" id="prin-menu" aria-label="Menu Principal">
                 <ul>
-                    <li><a href="#!" class="ativ">Inicio</a></li>
-                    <li><a href="#!">Destinos</a></li>
+                    <li><a href="index.html" class="ativ">Inicio</a></li>
+                    <li><a href="pages/destino.html">Destinos</a></li>
                     <li><a href="#!">Sobre Nós</a></li>
                     <li><a href="#!">Blog</a></li>
                     <li><a href="#!" class="borda">Contato</a></li>
@@ -120,11 +120,76 @@
 
             <div class="btn-des"><a href="pages/destino.html">Ver Proximos Destinos <img src="assets/icons/decolar-branco.png" alt=""></a></div>
 
-            <button class="topo"  onclick="voltarTopo()" aria-label="Voltar ao topo">></button>
         </section>
+        <button class="topo"  onclick="voltarTopo()" aria-label="Voltar ao topo"><img src="assets/icons/subir.png" alt=""></button>
     </main>
 
-    <footer></footer>
+    <footer>
+        <section class="rodape">
+            <div class="logo-rodape">
+                <div class="roda-logo">
+                    <div class="logo-rod">
+                        <div class="logo-img"><img src="assets/icons/logo-rodape.png" alt=""></div>
+                        <div class="logo-rod-txt">
+                            <p class="glo">Globe<span>Treck</span></p>
+                            <p class="jo">JOURNEYS</p>
+                        </div>
+                    </div>
+                    <p>Conectando você as melhores experiências e destinos do mundo com autenticidade e paixão.</p>
+                    <ul class="redes">
+                        <li><a href="#!"><img src="assets/icons/instagram.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/icons/youtube.png" alt=""></a></li>
+                        <li><a href="#!"><img src="assets/icons/tik-tok.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="navega">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pages/destino.html">Destinos</a></li>
+                    <li><a href="#!">Sobre Nós</a></li>
+                    <li><a href="#!">Blog</a></li>
+                    <li><a href="#!">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav class="navega">
+                <h3>Pacotes de Viagem</h3>
+                <ul>
+                    <li><a href="#!">Pacotes Nacionais</a></li>
+                    <li><a href="#!">Pacotes Internacionais</a></li>
+                    <li><a href="#!">Promoções</a></li>
+                    <li><a href="#!">Viagens em Grupo</a></li>
+                    <li><a href="#!">Lua de Mel</a></li>
+                </ul>
+            </nav>
+
+            <nav class="navega">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="#!">Perguntas Frequentes</a></li>
+                    <li><a href="#!">Política de Privacidade</a></li>
+                    <li><a href="#!">Termos de Uso</a></li>
+                    <li><a href="#!">Fale Conosco</a></li>
+                </ul>
+            </nav>
+
+            <div class="oferta">
+                <h3>Receba ofertas exclusivas!</h3>
+                <p>Inscreva-se e receba novidades e promoções imperdíveis.</p>
+                <form action="#">
+                    <input type="email" name="iemail" id="iemail" required placeholder="Seu melhor e-mail">
+                    <input type="submit" value="Inscrever-se" class="btn-enviar" onclick="oferta()">
+                </form>
+            </div>
+        </section>
+
+        <section class="rodape-copy">
+            <p>&copy; 2024 GlobeTreck Journeys. Todos os direitos reservados.</p>
+        </section>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
