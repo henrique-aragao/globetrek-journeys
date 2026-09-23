@@ -83,24 +83,26 @@ body{
 
 .logo-txt p{
     color: var(--cor-secundaria);
-    font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
 }
 
 .logo-img img{
     max-width: 65px;
 }
 
-p.globe{
-    font-weight: 900;
+p.globe, p.glo{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
 .globe span{
     color: var(--cor-primaria);
 }
 
-p.jorn{
+p.jorn, p.jo{
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     font-size: 1.1rem;
 }
 
@@ -321,12 +323,12 @@ a.btn-destino:active{
 .evento-img{
     width: 100%;
     background-color: #000000;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 8px 8px;
 }
 
 .evento-img img{
     width: 100%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 8px 8px;
     opacity: .8;
 }
 
@@ -363,18 +365,190 @@ a.btn-destino:active{
     align-items: center;
     justify-content: center;
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
+    right: 15px;
+    bottom: 50px;
+    width: 45px;
+    height: 45px;
     border: none;
     border-radius: 50%;
     font-size: 1.8rem;
     line-height: 1;
     color: var(--cor-branca);
     background-color: #0f766da6;
-    transform: rotate(-90deg);
     cursor: pointer;
+}
+
+.topo img{
+    max-width: 25px;
 }
 /* ---------- Fim da voltar ao topo ---------- */
 /* ========== Fim do conteudo da pagina inicio ========== */
+
+
+/* ========== Inicio do rodape da pagina ========== */
+footer{
+    width: 100%;
+    background-color: var(--cor-fundo-rodape);
+    border-top: 2px solid var(--cor-borda);
+    padding: 15px;
+}
+
+footer h3 {
+    color: var(--cor-branca);
+    margin-bottom: 10px;
+}
+
+footer a, footer p{
+    color: var(--cor-texto-rodape);
+}
+
+.rodape {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.logo-rodape{
+    flex: 0 0 100%;
+}
+
+.roda-logo{
+    margin: auto;
+    max-width: 360px;
+}
+
+.logo-rod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 5px 0;
+}
+
+.logo-rod-txt p{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-branca);
+    
+}
+
+.glo span{
+    color: var(--cor-primaria);
+}
+
+.redes{
+    margin: 20px 0 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes li{
+    display: flex;
+    border-radius: 50%;
+}
+
+.redes a{
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid var(--cor-branca);
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.redes a:active{
+    transform: translateY(5px) scale(.90);
+}
+
+.redes img{
+    max-width: 35px;
+}
+
+.navega li{
+    margin: 5px 0;
+    padding: 5px 5px 5px 0px;
+}
+
+.navega a{
+    padding: 5px 5px 5px 0px;
+    width: 100%;
+}
+
+.oferta{
+    max-width: 400px;
+    margin: auto;
+  
+}
+
+.oferta h3, .oferta p{
+    text-align: center;
+}
+
+.oferta p{
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#iemail{
+    color: var(--cor-branca);
+    width: 100%;
+    padding: 10px 5px 5px 5px;
+    max-width: 350px;
+    font-size: 1.14rem;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    border-bottom: 2px solid var(--cor-branca);
+    background-color: var(--cor-txt);
+    transition: border .5s, background-color .5s, border-radius .5s;
+}
+
+#iemail:focus{
+    outline: none;
+    border: 2px solid var(--cor-branca);
+    background-color: var(--cor-fundo-input);
+    border-radius: 8px;
+}
+
+input::placeholder{
+    color: var(--cor-texto-rodape);
+}
+
+.btn-enviar{
+    width: 100%;
+    max-width: 180px;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    transition: transform .3s, background-color .3s;
+}
+
+.btn-enviar:active{
+    transform: translateY(5px) scale(.90);
+    background-color: var(--cor-primaria-hover);
+}
+
+.rodape-copy{
+    margin: 30px 0 10px 0;
+    text-align: center;
+    border-top: 2px solid var(--cor-borda);
+}
+
+.rodape-copy p{
+    color: var(--cor-branca);
+    margin-top: 15px;
+}
+/* ========== Fim do rodape da pagina ========== */
