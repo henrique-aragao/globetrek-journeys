@@ -36,7 +36,152 @@
     </header>
 
     <main id="container-conteudo">
-        <h1>Em desenvolvimento!</h1>
+        <h1 class="dest">Destinos <span>Populares</span></h1>
+
+        <section class="carrossel-filtro">
+            <details class="filtros">
+                <summary>Categotias</summary>
+
+                <div class="opc-filtro">
+                    <button type="button" class="btn-filtro" data-filtro="todos">Todos</button>
+                    <button type="button" class="btn-filtro" data-filtro="praias">Praias</button>
+                    <button type="button" class="btn-filtro" data-filtro="montanhas">Montanhas</button>
+                    <button type="button" class="btn-filtro" data-filtro="cidades">Cidades Históricas</button>
+                    <button type="button" class="btn-filtro" data-filtro="aventura">Aventura</button>
+                </div>
+            </details>
+
+            <div class="carrossel">
+                <button type="button" class="seta">&#10094;</button>
+
+                <div class="janela">
+                    <div class="cards">
+                        <article class="card" data-categoria="cidades">
+                            <div class="card-img">
+                                <img src="../assets/img/santorini.jpg" alt="" class="ilustracao">
+
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</p>
+                                <h2>Santorini, Grécia</h2>
+                                <p class="cat cat-laran">Cidades Históricas</p>
+
+                                <p>Ruelas encatadoras, pores do sol inesqueciveis e mar azul cristalino.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+
+                        <article class="card" data-categoria="praias">
+                            <div class="card-img">
+                                <img src="../assets/img/phuket.jpg" alt="" class="ilustracao">
+
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7</p>
+                                <h2>Phuket, Tailãndia</h2>
+                                <p class="cat cat-verde">Praias</p>
+
+                                <p>Paraíso tropical com praias de areia branca e água turquesa.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+
+                        <article class="card" data-categoria="aventura">
+                            <div class="card-img">
+                                <img src="../assets/img/machu-picchu.jpg" alt="" class="ilustracao">
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</p>
+                                <h2>Machu Picchu, Peru</h2>
+                                <p class="cat cat-laran">Aventura</p>
+
+                                <p>Umas das 7 maravilhas do mundo em meio a paisagens incríveis.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+
+                        <article class="card" data-categoria="montanhas">
+                            <div class="card-img">
+                                <img src="../assets/img/banff.jpg" alt="" class="ilustracao">
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div  class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</p>
+                                <h2>Banff, Canada</h2>
+                                <p class="cat cat-verde">Montanhas</p>
+
+                                <p>Lagos cristalinos, trilhas e paisagens de tirar o folego.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+
+                        <article class="card" data-categoria="cidades">
+                            <div class="card-img">
+                                <img src="../assets/img/roma.jpg" alt="" class="ilustracao">
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.6</p>
+                                <h2>Roma, Itália</h2>
+                                <p class="cat cat-laran">Cidades Históricas</p>
+
+                                <p>História, cultura e gatronomia em um só lugar.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+
+                        <article class="card" data-categoria="praias">
+                            <div class="card-img">
+                                <img src="../assets/img/maldivas.jpg" alt="" class="ilustracao">
+                                <div class="like">
+                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                </div>
+                            </div>
+
+                            <div class="inform">
+                                <p class="estrelas"><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9</p>
+                                <h2>Maldivas</h2>
+                                <p class="cat cat-verde">Praias</p>
+
+                                <p>O destino perfeito para relaxar e viver momentos únicos.</p>
+
+                                <button class="lista">Adicionar à minha lista</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <button type="button" class="seta">&#10095;</button>
+            </div>
+
+        </section>
+
+
+
+
         <button class="topo"  onclick="voltarTopo()" aria-label="Voltar ao topo"><img src="../assets/icons/subir.png" alt=""></button>
     </main>
 
