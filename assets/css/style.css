@@ -165,10 +165,9 @@ p.jorn, p.jo{
     padding: 10px;
     color: var(--cor-texto);
     transition: color .2s;
-    cursor: pointer;
 }
 
-.menu a:active{
+.menu a:hover{
     color: var(--cor-primaria);
 }
 
@@ -187,14 +186,13 @@ a.btn-destino{
     padding: 16px 6px;
     box-shadow: 5px 5px 10px #0000003f;
     transition: transform .1s, background-color .1s, box-shadow .1s;
-    cursor: pointer;
 }
 
 a.ativ{
     color: var(--cor-primaria);
 }
 
-a.btn-destino:active{
+a.btn-destino:hover{
     transform: translateY(5px) scale(.90);
     background-color: var(--cor-primaria-hover);
     box-shadow: none;
@@ -347,7 +345,7 @@ a.btn-destino:active{
     transition: background-color .1s, transform .1s;
 }
 
-.btn-des a:active{
+.btn-des a:hover{
     background-color: var(--cor-primaria-hover);
     transform: translateY(5px) scale(.90);
 }
@@ -375,7 +373,6 @@ a.btn-destino:active{
     line-height: 1;
     color: var(--cor-branca);
     background-color: #0f766da6;
-    cursor: pointer;
 }
 
 .topo img{
@@ -386,6 +383,14 @@ a.btn-destino:active{
 
 
 /* ========== Inicio do conteudo da pagina destinos ========== */
+#container-destino{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
 .dest{
     margin-top: 10px;
 }
@@ -409,7 +414,7 @@ a.btn-destino:active{
     padding: 8px;
     box-shadow: 0px 0px 10px #0000002c;
     border-radius: 8px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .filtros summary {
@@ -443,11 +448,19 @@ a.btn-destino:active{
     content: "-";
 }
 
-.opc-filtro{
+.opc-filtro {
     margin: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.filtros[open] .opc-filtro {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .btn-filtro{
@@ -464,45 +477,88 @@ a.btn-destino:active{
     border: 2px solid #ffffff4d;
     border-radius: 10px;
     transition: background-color .1s;
-    cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn-filtro:active{
+.btn-filtro:hover{
     background-color: #ffffff4d;
 }
 
 .carrossel{
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     margin: 10px 0px 20px 0;
 }
 
-.janelas{
+.seta{
+    background-image: linear-gradient(to bottom, #FFF, #777777, #777777, #FFF);
+    border: none;
+    width: 40px;
+    min-height: 550px;
+    color: var(--cor-branca);
+    font-size: 2.2rem;
+}
+
+.janela{
+    display: flex;
+    align-items: center;
     width: 100%;
     overflow: hidden;
+    background-color: #ffffff00;
+    min-height: 520px;
+    padding: 10px;
 }
 
 .cards {
     width: 100%;
     display: flex;
-    flex-direction: column;
     gap: 20px;
+    transition: transform .9s ease;
 }
+
 .card{
-    width: 100%;
+    width: 92%;
     max-width: 350px;
     background-color: var(--cor-branca);
     box-shadow: 0px 0px 10px #0000004f;
     border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.badge{
+    position: relative;
+}
+
+.badge::before{
+    position: absolute;
+    color: var(--cor-branca);
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 4px 8px;
+    top: 10px;
+    left: 10px;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.visitados::before{
+    content: 'Mais visitados';
+    background-color: var(--cor-primaria);
+}
+
+.especial::before{
+    content: 'Oferta especial';
+    background-color: #0db60d;
 }
 
 .ilustracao{
     width: 100%;
-    min-height: 200px;
+    height: 200px;
     border-radius: 20px;
     box-shadow: 0px 5px 10px #00000031;
+    object-fit: cover;
 }
 
 .card-img{
@@ -536,8 +592,8 @@ a.btn-destino:active{
 }
 
 .inform h2{
-    font-weight: 700;
-    font-size: 1.7rem;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .inform p{
@@ -566,7 +622,7 @@ p.cat{
 }
 
 p.cat-verde{
-    color: rgb(13, 182, 13);
+    color: #0db60d;
 }
 
 p.cat-laran{
@@ -575,9 +631,7 @@ p.cat-laran{
 
 .lista{
     display: block;
-   
     width: 100%;
-    max-width: 90%;
     margin: 20px auto 5px auto;
     padding: 16px 8px;
     font-size: 1.1rem;
@@ -591,7 +645,7 @@ p.cat-laran{
     transition: transform .2s, box-shadow .2s;
 }
 
-.lista:active{
+.lista:hover{
     transform: translateY(5px) scale(.90);
     box-shadow: none;
 }
@@ -666,11 +720,10 @@ footer a, footer p{
     border-radius: 50%;
     padding: 10px;
     border: 2px solid var(--cor-branca);
-    cursor: pointer;
     transition: transform .2s;
 }
 
-.redes a:active{
+.redes a:hover{
     transform: translateY(5px) scale(.90);
 }
 
@@ -749,7 +802,7 @@ input::placeholder{
     transition: transform .3s, background-color .3s;
 }
 
-.btn-enviar:active{
+.btn-enviar:hover{
     transform: translateY(5px) scale(.90);
     background-color: var(--cor-primaria-hover);
 }
