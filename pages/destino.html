@@ -35,12 +35,12 @@
         </div>
     </header>
 
-    <main id="container-conteudo">
+    <main id="container-destino">
         <h1 class="dest">Destinos <span>Populares</span></h1>
 
         <section class="carrossel-filtro">
             <details class="filtros">
-                <summary>Categotias</summary>
+                <summary>Categorias</summary>
 
                 <div class="opc-filtro">
                     <button type="button" class="btn-filtro" data-filtro="todos">Todos</button>
@@ -52,16 +52,18 @@
             </details>
 
             <div class="carrossel">
-                <button type="button" class="seta">&#10094;</button>
+                <button type="button" class="seta anterior">&#10094;</button>
 
                 <div class="janela">
                     <div class="cards">
-                        <article class="card" data-categoria="cidades">
+                        <article class="card badge visitados" data-categoria="cidades">
                             <div class="card-img">
                                 <img src="../assets/img/santorini.jpg" alt="" class="ilustracao">
 
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="santorini" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -76,12 +78,14 @@
                             </div>
                         </article>
 
-                        <article class="card" data-categoria="praias">
+                        <article class="card badge especial" data-categoria="praias">
                             <div class="card-img">
                                 <img src="../assets/img/phuket.jpg" alt="" class="ilustracao">
 
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="phuket" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -99,8 +103,11 @@
                         <article class="card" data-categoria="aventura">
                             <div class="card-img">
                                 <img src="../assets/img/machu-picchu.jpg" alt="" class="ilustracao">
+
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="machu" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -118,8 +125,11 @@
                         <article class="card" data-categoria="montanhas">
                             <div class="card-img">
                                 <img src="../assets/img/banff.jpg" alt="" class="ilustracao">
+
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="banff" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -134,11 +144,14 @@
                             </div>
                         </article>
 
-                        <article class="card" data-categoria="cidades">
+                        <article class="card badge visitados" data-categoria="cidades">
                             <div class="card-img">
                                 <img src="../assets/img/roma.jpg" alt="" class="ilustracao">
+
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="roma" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -153,11 +166,13 @@
                             </div>
                         </article>
 
-                        <article class="card" data-categoria="praias">
+                        <article class="card badge especial" data-categoria="praias">
                             <div class="card-img">
                                 <img src="../assets/img/maldivas.jpg" alt="" class="ilustracao">
                                 <div class="like">
-                                    <button><img src="../assets/icons/gostei-padrao.png" alt=""></button>
+                                    <button type="button" class="botao-curtir" data-id="maldivas" onclick="curti(this)">
+                                        <img class="gostei" src="../assets/icons/gostei-padrao.png" alt="Curtir">
+                                    </button>
                                 </div>
                             </div>
 
@@ -174,13 +189,9 @@
                     </div>
                 </div>
 
-                <button type="button" class="seta">&#10095;</button>
+                <button type="button" class="seta proximo">&#10095;</button>
             </div>
-
         </section>
-
-
-
 
         <button class="topo"  onclick="voltarTopo()" aria-label="Voltar ao topo"><img src="../assets/icons/subir.png" alt=""></button>
     </main>
