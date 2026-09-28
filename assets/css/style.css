@@ -214,6 +214,10 @@ a.btn-destino:hover{
     color: var(--cor-primaria);
 }
 
+.viagem{
+    display: none;
+}
+
 .anos{
     margin: 30px auto 10px auto;
     max-width: 350px;
@@ -395,8 +399,10 @@ a.btn-destino:hover{
 }
 
 .dest{
-    margin-top: 10px;
+    text-align: center;
+    margin: 15px 0 25px 0;
 }
+
 .dest span{
     color: var(--cor-primaria);
 }
@@ -646,7 +652,7 @@ p.cat-laran{
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     border: 2px solid var(--cor-secundaria);
-    box-shadow: 5px 5px 10px #0f766d21;
+    box-shadow: 5px 5px 10px #0f766d2c;
     border-radius: 10px;
     transition: transform .2s, box-shadow .2s;
 }
@@ -654,6 +660,14 @@ p.cat-laran{
 .lista:hover{
     transform: translateY(5px) scale(.90);
     box-shadow: none;
+}
+
+.mapa{
+    display: none;
+}
+
+.mundo{
+    display: none;
 }
 /* ========== Fim do conteudo da pagina destinos ========== */
 
