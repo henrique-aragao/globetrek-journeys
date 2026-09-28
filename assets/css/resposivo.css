@@ -4,7 +4,7 @@
 @media (min-width: 768px) {
     /* ========== Inicio do estilo global ========== */
     a{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     h1{
@@ -20,7 +20,7 @@
     }
 
     p{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     /* ========== Fim do estilo global ========== */
 
@@ -288,6 +288,366 @@
 }
 
 /* Computador */
-@media (min-width: 1024px) {
+@media (min-width: 1035px) {
+    /* ========== Inicio do estilo global ========== */
+    h1{
+        font-size: 2.2rem;
+        font-weight: 800;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    p,a{
+        font-size: 1.09rem;
+    }
+    /* ========== Fim do estilo global ========== */
+
+
+    /* ========== Inicio do menu ========== */
+    .logo{
+        max-width: 350px;
+    }
+
+    p.globe, p.glo{
+        font-size: 2rem;
+    }
+
+    p.jorn, p.jo{
+        font-size: 1.5rem;
+    }
+
+    .logo-img img{
+        max-width: 80px;
+    }
+
+    .menu a{
+        transition: transform .3s, color .3s;
+        cursor: pointer;
+    }
+
+    .menu a:hover{
+        transform: translateY(-5px);
+    }
+
+    .menu a:active{
+        transform: translateY(5px);
+    }
+
+    .menu a:focus-visible{
+        outline: 2px solid var(--cor-primaria);
+        outline-offset: 4px;
+        border-radius: 5px;
+        transform: translateY(-5px);
+    }
+
+    a.ativ{
+        transform: translateY(5px);
+    }
+
+    a.ativ:hover{
+        transform: translateY(5px);
+    }
+
+    a.btn-destino{
+        cursor: pointer;
+        transition: box-shadow .3s, background-color .3s, transform .3s;
+    }
+
+    a.btn-destino:hover{
+        box-shadow: 8px 8px 15px #0000003f;
+        background-color: var(--cor-primaria);
+    }
+
+    a.btn-destino:active{
+        box-shadow: none;
+        background-color: var(--cor-primaria-hover);
+    }
+    /* ========== Fim do menu ========== */
+
+    *{
+        outline: 1px solid re;
+    }
+
+    /* ========== Inicio do conteudo da pagina inicio ========== */
+    #container-conteudo{
+        width: 100%;
+        max-width: 1800px;
+        flex-flow: row;
+        align-items: flex-start;
+        margin: 20px auto;
+    }
+
+    .viagem{
+        display: block;
+        margin: auto;
+        height: 350px;
+    }
+
+    .jornada{
+        flex: 2;
+    }
+
+    .jornada h1{
+        max-width: 500px;
+    }
+    .jornada p{
+        margin: auto;
+    }
+
+    .anos{
+        margin: 30px auto 0 50px;
+    }
+
+    .timeline{
+        flex: 3;
+    }
+
+    .evento{
+        min-height: 170px;
+    }
+
+    /* ---------- Inicio do botão destinos ---------- */
+    .btn-des a{
+        transition: box-shadow .3s, background-color .3s, transform .3s;
+        box-shadow: 5px 5px 10px #0000002c;
+        cursor: pointer;
+    }
+
+    .btn-des a:hover{
+        box-shadow: 8px 8px 15px #0000002c;
+        background-color: var(--cor-primaria);
+        transform: translateY(-5px) ;
+    }
+
+    .btn-des a:active{
+        box-shadow: none;
+        background-color: var(--cor-primaria-hover);
+        transform: translateY(5px) ;
+    }
+
+    .btn-des :focus-visible{
+        outline: 2px solid var(--cor-primaria);
+        outline-offset: 4px;
+        transform: translateY(-5px);
+    }
+    /* ---------- Fim do botão destinos ---------- */
+
+    /* ---------- Inicio da voltar ao topo ---------- */
+    .topo{
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+    .topo:hover{
+        background-color: var(--cor-secundaria);
+    }
+
+    .topo:focus-visible{
+        outline: 2px solid var(--cor-secundaria );
+        outline-offset: 4px;
+        background-color: var(--cor-secundaria);
+    }
+    /* ---------- Fim da voltar ao topo ---------- */
+    /* ========== Fim do conteudo da pagina inicio ========== */
+
+
+    /* ========== Inicio do conteudo da pagina destinos ========== */
+    .carrossel-filtro{
+        max-width: 1800px;
+        min-height: 1000px;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+
+    .filtro{
+        flex: 2;
+    }
+
+    .carrossel{
+        gap: 0;
+        margin: 0;
+        flex: 3;
+    }
+
+    .opc-filtro{
+        padding: 5px;
+        justify-content: left;
+        gap: 10px;
+        width: 650px;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .seta{
+        display: none;
+    }
+
+    .btn-filtro{
+        cursor: pointer;
+    }
+
+    .btn-filtro:focus-visible{
+        outline: 2px solid var(--cor-primaria);
+        outline-offset: 4px;
+        background-color: #ffffff4d;
+    }
+
+    .card{
+        transition: transform .3s, border .3s;
+        border: 1px solid transparent;
+    }
+
+    .card:hover{
+        transform: translateY(-3px);
+        border: 1px solid var(--cor-secundaria);
+    }
+
+    .like button{
+        cursor: pointer;
+    }
+
+    .like button:focus-visible{
+        outline: 2px solid var(--cor-primaria-hover );
+        outline-offset: 4px;
+    }
+
+    .lista {
+        cursor: pointer;
+    }
+
+    .lista:hover{
+        transform: none;
+        box-shadow: none;
+    }
+
+    .lista:active{
+        transform: translateY(3px) scale(.95);
+        box-shadow: none;
+    }
+
+    .lista:focus-visible{
+        outline: 2px solid var(--cor-secundaria);
+        outline-offset: 4px;
+        transform: translateY(3px) scale(.95);
+        box-shadow: none;
+    }
+
+    .mapa{
+        display: block;
+        margin: 50px 0;
+    }
+
+    .mundo{
+        max-width: 450px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mundo p{
+        font-size: 1.2rem;
+    }
+
+    .mundo img{
+        border-radius: 50%;
+        max-width: 80px;
+        padding: 5px;
+        border-left: 3px solid var(--cor-primaria);
+        border-top: 2px dashed var(--cor-primaria);
+        border-bottom: 2px dashed var(--cor-primaria);
+        
+    }
+    /* ========== Fim do conteudo da pagina destinos ========== */
     
+
+    /* ========== Inicio do rodape da pagina ========== */
+    .rodape{
+        margin: 30px auto 10px auto;
+        max-width: 1800px;
+        justify-content: space-around;
+    }
+
+    .logo-rodape{
+        flex: 1;
+        max-width: 430px;
+    }
+
+    .roda-logo{
+        max-width: 350px;
+    }
+
+    .logo-rod{
+        margin: 0;
+    }
+
+    .redes a{
+        cursor: pointer;
+    }
+
+    .redes a:hover{
+        transform: none;
+    }
+
+    .redes a:active{
+        transform: translateY(5px) scale(.90);
+    }
+
+    .redes a:focus-visible{
+        outline: 2px solid var(--cor-fundo);
+        outline-offset: 6px;
+        transform: translateY(5px) scale(.90);
+    }
+
+    .navega li{
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .navega a{
+        padding: 0;
+        cursor: pointer;
+        transition: color .4s;
+    }
+
+    .navega a:hover{
+        color: var(--cor-branca);
+    }
+
+    .navega a:focus-visible{
+        outline: 2px solid var(--cor-fundo);
+        outline-offset: 4px;
+        transform: translateY(5px) scale(.90);
+        color: var(--cor-branca);
+        border-radius: 5%;
+    }
+
+    .oferta{
+        margin: 0;
+    }
+
+    .btn-enviar{
+        cursor: pointer;
+    }
+
+    .btn-enviar:hover{
+        transform: none;
+        background-color: var(--cor-primaria);
+    }
+
+    .btn-enviar:active{
+        transform: translateY(5px) scale(.90);
+        background-color: var(--cor-primaria-hover);
+    }
+    .btn-enviar:focus-visible{
+        outline: 2px solid var(--cor-fundo);
+        outline-offset: 6px;
+        transform: translateY(5px) scale(.90);
+        background-color: var(--cor-primaria-hover);
+    }
+    /* ========== Fim do rodape da pagina ========== */
 }
