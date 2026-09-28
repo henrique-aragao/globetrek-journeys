@@ -37,20 +37,27 @@
     </header>
 
     <main id="container-destino">
-        <h1 class="dest">Destinos <span>Populares</span></h1>
-
         <section class="carrossel-filtro">
-            <details class="filtros" open>
-                <summary>Categorias</summary>
+            <div class="filtro">
+                <h1 class="dest">Destinos <span>Populares</span></h1>
+                <details class="filtros" open>
+                    <summary>Categorias</summary>
+                    <div class="opc-filtro">
+                        <button type="button" class="btn-filtro" data-filtro="todos">Todos</button>
+                        <button type="button" class="btn-filtro" data-filtro="praias">Praias</button>
+                        <button type="button" class="btn-filtro" data-filtro="montanhas">Montanhas</button>
+                        <button type="button" class="btn-filtro" data-filtro="cidades">Cidades Históricas</button>
+                        <button type="button" class="btn-filtro" data-filtro="aventura">Aventura</button>
+                    </div>
+                </details>
 
-                <div class="opc-filtro">
-                    <button type="button" class="btn-filtro" data-filtro="todos">Todos</button>
-                    <button type="button" class="btn-filtro" data-filtro="praias">Praias</button>
-                    <button type="button" class="btn-filtro" data-filtro="montanhas">Montanhas</button>
-                    <button type="button" class="btn-filtro" data-filtro="cidades">Cidades Históricas</button>
-                    <button type="button" class="btn-filtro" data-filtro="aventura">Aventura</button>
+                <div class="mapa"><img src="../assets/img/mapa.png" alt=""></div>
+
+                <div class="mundo">
+                    <img src="../assets/icons/terra.png" alt="">
+                    <p>Explore o mapa e descubra destinos incríveis ao redor do mundo!</p>
                 </div>
-            </details>
+            </div>
 
             <div class="carrossel">
                 <button type="button" class="seta anterior">&#10094;</button>
