@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid re;
 }
 
 a{
@@ -49,15 +48,6 @@ body{
     background-color: var(--cor-fundo);
     font-family: var(--fonte-texto);
 }
-
-#container-conteudo{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 10px;
-}
 /* ========== Fim do estilo global ========== */
 
 /* ========== Inicio do menu ========== */
@@ -70,6 +60,7 @@ body{
     gap: 10px;
     background-color: var(--cor-branca);
     border-bottom: 1px solid var(--cor-borda);
+    min-height: 80px;
 }
 
 .logo{
@@ -202,6 +193,15 @@ a.btn-destino:hover{
 
 
 /* ========== Inicio do conteudo da pagina inicio ========== */
+#container-conteudo{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
 .jornada h1{
     max-width: 240px;
     display: flex;
@@ -215,11 +215,10 @@ a.btn-destino:hover{
 }
 
 .anos{
-    margin: auto;
+    margin: 30px auto 10px auto;
     max-width: 350px;
     display: flex;
     align-items: center;
-    margin-top: 30px;
     background-color: var(--cor-branca);
     border-radius: 10px;
     box-shadow: 0px 0px 10px #00000023;
@@ -354,6 +353,10 @@ a.btn-destino:hover{
     transform: rotate(45deg);
     max-width: 40px;
 }
+
+.eve-img{
+    display: none;
+}
 /* ---------- Fim do botão destinos ---------- */
 /* ---------- Fim da timeline ---------- */
 
@@ -399,6 +402,7 @@ a.btn-destino:hover{
 }
 
 .carrossel-filtro{
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -449,6 +453,8 @@ a.btn-destino:hover{
 }
 
 .opc-filtro {
+    width: 100%;
+    max-width: 100%;
     margin: 10px 0;
     display: flex;
     flex-direction: column;
@@ -493,7 +499,7 @@ a.btn-destino:hover{
 }
 
 .seta{
-    background-image: linear-gradient(to bottom, #FFF, #777777, #777777, #FFF);
+    background-image: linear-gradient(to bottom, var(--cor-fundo), #777777, #777777, var(--cor-fundo));
     border: none;
     width: 40px;
     min-height: 550px;
@@ -640,7 +646,7 @@ p.cat-laran{
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     border: 2px solid var(--cor-secundaria);
-    box-shadow: 5px 5px 10px #0f766d3a;
+    box-shadow: 5px 5px 10px #0f766d21;
     border-radius: 10px;
     transition: transform .2s, box-shadow .2s;
 }
