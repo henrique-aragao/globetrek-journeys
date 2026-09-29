@@ -29,7 +29,7 @@
     #container-menu{
         align-items: center;
         justify-content: space-around;
-        gap: 20px;
+        gap: var(--gap-spacing-5);
         min-height: 100px;
     }
 
@@ -69,7 +69,7 @@
     }
 
     .menu a{
-        padding: 5px;
+        padding: var(--padding-spacing-1);
         border: none;
     }
 
@@ -80,7 +80,7 @@
     a.btn-destino{
         width: 100%;
         max-width: 300px;
-        padding: 12px 16px;
+        padding: var(--padding-spacing-10);
     }
     /* ========== Fim do menu ========== */
 
@@ -99,8 +99,8 @@
         grid-template-columns: minmax(0, 400px) 30px minmax(0, 400px);
         max-width: 1000px;
         justify-content: center;
-        gap: 40px;
-        padding: 30px 0;
+        gap: var(--gap-spacing-7);
+        padding: var(--padding-spacing-14);
     }
 
     .cards-timeline::before {
@@ -130,9 +130,9 @@
         width: 100%;
         max-width: 400px;
         overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
-        box-shadow: 5px 5px 10px #0000001f;
+        border-radius: var(--radius-3);
+        background-color: var(--cor-preta);
+        box-shadow: var(--shadow-5);
     }
 
     .eve-img img {
@@ -216,7 +216,7 @@
 
     /* ========== Inicio do conteudo da pagina destinos ========== */
     #container-destino{
-        margin: 20px 0 30px 0;
+        margin: var(--margin-spacing-17);
     }
 
     .carrossel-filtro{
@@ -241,23 +241,23 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: var(--gap-spacing-5);
         margin: 0;
     }
 
     .btn-filtro{
         background-color: var(--cor-branca);
-        box-shadow: 0px 0px 10px #00000027;
+        box-shadow: var(--shadow-1);
         color: var(--cor-txt);
         max-width: 200px;
-        padding: 10px 5px;
+        padding: var(--padding-spacing-9);
         margin: 0;
         font-size: 1.2rem;
         font-weight: 700;
     }
 
     .btn-filtro:hover{
-        background-color: #eeeeee;
+        background-color: var(--cor-filtro);
     }
 
     .card{
@@ -336,9 +336,9 @@
     }
 
     .menu a:focus-visible{
-        outline: 2px solid var(--cor-primaria);
-        outline-offset: 4px;
-        border-radius: 5px;
+        outline: var(--outline-primaria);
+        outline-offset: var(--outline-offset-1);
+        border-radius: var(--radius-1);
         transform: translateY(-5px);
     }
 
@@ -356,7 +356,7 @@
     }
 
     a.btn-destino:hover{
-        box-shadow: 8px 8px 15px #0000003f;
+        box-shadow: var(--shadow-9);
         background-color: var(--cor-primaria);
     }
 
@@ -366,9 +366,6 @@
     }
     /* ========== Fim do menu ========== */
 
-    *{
-        outline: 1px solid re;
-    }
 
     /* ========== Inicio do conteudo da pagina inicio ========== */
     #container-conteudo{
@@ -376,7 +373,7 @@
         max-width: 1800px;
         flex-flow: row;
         align-items: flex-start;
-        margin: 20px auto;
+        margin: var(--margin-spacing-10);
     }
 
     .viagem{
@@ -392,12 +389,15 @@
     .jornada h1{
         max-width: 500px;
     }
+
     .jornada p{
         margin: auto;
     }
 
     .anos{
-        margin: 30px auto 0 50px;
+        margin: var(--margin-spacing-20);
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .timeline{
@@ -411,12 +411,12 @@
     /* ---------- Inicio do botão destinos ---------- */
     .btn-des a{
         transition: box-shadow .3s, background-color .3s, transform .3s;
-        box-shadow: 5px 5px 10px #0000002c;
+        box-shadow: var(--shadow-7);
         cursor: pointer;
     }
 
     .btn-des a:hover{
-        box-shadow: 8px 8px 15px #0000002c;
+        box-shadow: var(--shadow-10);
         background-color: var(--cor-primaria);
         transform: translateY(-5px) ;
     }
@@ -428,8 +428,8 @@
     }
 
     .btn-des :focus-visible{
-        outline: 2px solid var(--cor-primaria);
-        outline-offset: 4px;
+        outline: var(--outline-primaria);
+        outline-offset: var(--outline-offset-1);
         transform: translateY(-5px);
     }
     /* ---------- Fim do botão destinos ---------- */
@@ -439,13 +439,14 @@
         cursor: pointer;
         transition: background-color .3s;
     }
+
     .topo:hover{
         background-color: var(--cor-secundaria);
     }
 
     .topo:focus-visible{
-        outline: 2px solid var(--cor-secundaria );
-        outline-offset: 4px;
+        outline: var(--outline-secundaria);
+        outline-offset: var(--outline-offset-1);
         background-color: var(--cor-secundaria);
     }
     /* ---------- Fim da voltar ao topo ---------- */
@@ -471,9 +472,9 @@
     }
 
     .opc-filtro{
-        padding: 5px;
+        padding: var(--padding-spacing-1);
         justify-content: left;
-        gap: 10px;
+        gap: var(--gap-spacing-3);
         width: 650px;
     }
 
@@ -491,19 +492,19 @@
     }
 
     .btn-filtro:focus-visible{
-        outline: 2px solid var(--cor-primaria);
-        outline-offset: 4px;
-        background-color: #ffffff4d;
+        outline: var(--outline-primaria);
+        outline-offset: var(--outline-offset-1);
+        background-color: var(--cor-vidro-hover);
     }
 
     .card{
         transition: transform .3s, border .3s;
-        border: 1px solid transparent;
+        border: var(--border-transpa);
     }
 
     .card:hover{
         transform: translateY(-3px);
-        border: 1px solid var(--cor-secundaria);
+        border: var(--border-secund);
     }
 
     .like button{
@@ -511,8 +512,8 @@
     }
 
     .like button:focus-visible{
-        outline: 2px solid var(--cor-primaria-hover );
-        outline-offset: 4px;
+        outline: var(--outline-primaria-hover);
+        outline-offset: var(--outline-offset-1);
     }
 
     .lista {
@@ -530,23 +531,23 @@
     }
 
     .lista:focus-visible{
-        outline: 2px solid var(--cor-secundaria);
-        outline-offset: 4px;
+        outline: var(--outline-secundaria);
+        outline-offset: var(--outline-offset-1);
         transform: translateY(3px) scale(.95);
         box-shadow: none;
     }
 
     .mapa{
         display: block;
-        margin: 50px 0;
+        margin: var(--margin-spacing-8);
     }
 
     .mundo{
         max-width: 450px;
-        margin: 5px;
+        margin: var(--margin-spacing-1);
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: var(--gap-spacing-3);
     }
 
     .mundo p{
@@ -554,12 +555,12 @@
     }
 
     .mundo img{
-        border-radius: 50%;
+        border-radius: var(--radius-7);
         max-width: 80px;
-        padding: 5px;
-        border-left: 3px solid var(--cor-primaria);
-        border-top: 2px dashed var(--cor-primaria);
-        border-bottom: 2px dashed var(--cor-primaria);
+        padding: var(--padding-spacing-1);
+        border-left: var(--border-prima-especial);
+        border-top: var(--border-especial);
+        border-bottom: var(--border-especial);
         
     }
     /* ========== Fim do conteudo da pagina destinos ========== */
@@ -567,7 +568,7 @@
 
     /* ========== Inicio do rodape da pagina ========== */
     .rodape{
-        margin: 30px auto 10px auto;
+        margin: var(--margin-spacing-21);
         max-width: 1800px;
         justify-content: space-around;
     }
@@ -598,13 +599,13 @@
     }
 
     .redes a:focus-visible{
-        outline: 2px solid var(--cor-fundo);
-        outline-offset: 6px;
+        outline: var(--outline-fundo);
+        outline-offset: var(--outline-offset-2);
         transform: translateY(5px) scale(.90);
     }
 
     .navega li{
-        margin: 10px 0;
+        margin: var(--margin-spacing-7);
         padding: 0;
     }
 
@@ -619,11 +620,11 @@
     }
 
     .navega a:focus-visible{
-        outline: 2px solid var(--cor-fundo);
-        outline-offset: 4px;
+        outline: var(--outline-fundo);
+        outline-offset: var(--outline-offset-1);
         transform: translateY(5px) scale(.90);
         color: var(--cor-branca);
-        border-radius: 5%;
+        border-radius: var(--radius-1);
     }
 
     .oferta{
@@ -643,9 +644,10 @@
         transform: translateY(5px) scale(.90);
         background-color: var(--cor-primaria-hover);
     }
+    
     .btn-enviar:focus-visible{
-        outline: 2px solid var(--cor-fundo);
-        outline-offset: 6px;
+        outline: var(--outline-fundo);
+        outline-offset: var(--outline-offset-2);
         transform: translateY(5px) scale(.90);
         background-color: var(--cor-primaria-hover);
     }
