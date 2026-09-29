@@ -56,10 +56,10 @@ body{
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
-    padding: 10px;
-    gap: 10px;
+    padding: var(--padding-spacing-4);
+    gap: var(--gap-spacing-3);
     background-color: var(--cor-branca);
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: var(--border-principal);
     min-height: 80px;
 }
 
@@ -68,7 +68,7 @@ body{
     max-width: 220px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: var(--gap-spacing-1);
     flex: 3;
 }
 
@@ -114,13 +114,13 @@ p.jorn, p.jo{
     color: var(--cor-primaria);
     border: none;
     background-color: transparent;
-    border-radius: 50px;
-    margin: 5px 5px 0px 0px;
+    border-radius: var(--radius-6);
+    margin: var(--margin-spacing-12);
     transition: all .7s ease;
 }
 
 #btn-menu.ativo{
-    border-radius: 10px;
+    border-radius: var(--radius-3);
     transform: rotate(360deg);
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
@@ -142,7 +142,7 @@ p.jorn, p.jo{
 
 .menu ul{
     display: flex;
-    gap: 10px;
+    gap: var(--gap-spacing-3);
     flex-flow: column wrap;
 }
 
@@ -151,9 +151,9 @@ p.jorn, p.jo{
 }
 
 .menu a{
-    border-top: 1px solid var(--cor-borda);
+    border-top: var(--border-principal);
     width: 100%;
-    padding: 10px;
+    padding: var(--padding-spacing-4);
     color: var(--cor-texto);
     transition: color .2s;
 }
@@ -163,19 +163,19 @@ p.jorn, p.jo{
 }
 
 a.borda{
-    padding: 15px 0;
-    border-bottom: 1px solid var(--cor-borda);
+    padding: var(--padding-spacing-11);
+    border-bottom: var(--border-principal);
 }
 
 a.btn-destino{
     border: none;
-    margin: 10px auto;
+    margin: var(--margin-spacing-9);
     max-width: 90%;
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    border-radius: 10px;
-    padding: 16px 6px;
-    box-shadow: 5px 5px 10px #0000003f;
+    border-radius: var(--radius-3);
+    padding: var(--padding-spacing-12);
+    box-shadow: var(--shadow-6);
     transition: transform .1s, background-color .1s, box-shadow .1s;
 }
 
@@ -198,14 +198,14 @@ a.btn-destino:hover{
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 10px;
+    gap: var(--gap-spacing-6);
+    padding: var(--padding-spacing-4);
 }
 
 .jornada h1{
     max-width: 240px;
     display: flex;
-    margin: 10px auto;
+    margin: var(--margin-spacing-9);
     flex-flow: column;
     letter-spacing: 1px;
 }
@@ -219,33 +219,34 @@ a.btn-destino:hover{
 }
 
 .anos{
-    margin: 30px auto 10px auto;
+    margin: var(--margin-spacing-21);
     max-width: 350px;
     display: flex;
     align-items: center;
     background-color: var(--cor-branca);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #00000023;
-    padding: 10px;
-    gap: 10px;
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-1);
+    padding: var(--padding-spacing-4);
+    gap: var(--gap-spacing-3);
 }
 
 .anos-img {
-    border-radius: 50%;
-    padding: 10px;
-    border-right: 3px solid var(--cor-primaria);
-    border-top: 2px dashed var(--cor-primaria);
-    border-bottom: 2px dashed var(--cor-primaria);
+    border-radius: var(--radius-7);
+    padding: var(--padding-spacing-4);
+    border-right: var(--border-prima-especial);
+    border-top: var(--border-especial);
+    border-bottom: var(--border-especial);
 }
+
 .anos-img img{
-    border-radius: 50%;
+    border-radius: var(--radius-7);
     max-width: 64px;
 }
 
 .anos-txt p{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--gap-spacing-2);
     font-weight: 600;
 }
 
@@ -259,7 +260,7 @@ a.btn-destino:hover{
 .timeline{
     position: relative;
     width: 100%;
-    padding: 5px;
+    padding: var(--padding-spacing-1);
 }
 
 .cards-timeline{
@@ -267,7 +268,7 @@ a.btn-destino:hover{
     display: grid;
     grid-template-columns: 24px minmax(0, 300px);
     justify-content: space-between;
-    gap: 30px;
+    gap: var(--gap-spacing-6);
     width: 100%;
     max-width: 450px;
 }
@@ -280,17 +281,17 @@ a.btn-destino:hover{
     left: 10px;
     width: 4px;
     background-image: linear-gradient(to bottom, var(--cor-primaria), var(--cor-secundaria), var(--cor-primaria), var(--cor-secundaria), var(--cor-primaria));
-    border-radius: 60%;
+    border-radius: var(--radius-8);
 }
 
 .evento{
     grid-column: 2;
     width: 100%;
     max-width: 300px;
-    border-radius: 10px;
+    border-radius: var(--radius-3);
     background-color: var(--cor-branca);
-    box-shadow: 5px 5px 10px #0000001f;
-    border: 1px solid var(--cor-borda);
+    box-shadow: var(--shadow-5);
+    border: var(--border-principal);
 }
 
 .evento-marcador {
@@ -298,14 +299,14 @@ a.btn-destino:hover{
     align-self: center;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
+    border-radius: var(--radius-7);
     background-color: var(--cor-branca);
-    border: 5px solid var(--cor-borda);
+    border: var(--border-borda);
     z-index: 2;
 }
 
 .evento-txt{
-    padding: 10px;
+    padding: var(--padding-spacing-4);
     font-weight: 500;
 }
 
@@ -316,35 +317,35 @@ a.btn-destino:hover{
 }
 
 .evento-txt h2{
-    margin: 10px 0;
+    margin: var(--margin-spacing-7);
     font-size: 1.6rem;
     font-weight: 800;
 }
 
 .evento-img{
     width: 100%;
-    background-color: #000000;
-    border-radius: 0 0 8px 8px;
+    background-color: var(--cor-preta);
+    border-radius: var(--radius-9);
 }
 
 .evento-img img{
     width: 100%;
-    border-radius: 0 0 8px 8px;
+    border-radius: var(--radius-9);
     opacity: .8;
 }
 
 /* ---------- Inicio do botão destinos ---------- */
 .btn-des a{
-    margin: 50px auto;
+    margin: var(--margin-spacing-11);
     max-width: 300px;
-    padding: 8px 10px;
+    padding: var(--padding-spacing-8);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: var(--gap-spacing-1);
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    border-radius: 15px;
+    border-radius: var(--radius-4);
     transition: background-color .1s, transform .1s;
 }
 
@@ -375,11 +376,11 @@ a.btn-destino:hover{
     width: 45px;
     height: 45px;
     border: none;
-    border-radius: 50%;
+    border-radius: var(--radius-7);
     font-size: 1.8rem;
     line-height: 1;
     color: var(--cor-branca);
-    background-color: #0f766da6;
+    background-color: var(--cor-topo);
 }
 
 .topo img{
@@ -395,12 +396,12 @@ a.btn-destino:hover{
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: var(--gap-spacing-6);
 }
 
 .dest{
     text-align: center;
-    margin: 15px 0 25px 0;
+    margin: var(--margin-spacing-15);
 }
 
 .dest span{
@@ -414,16 +415,16 @@ a.btn-destino:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 20px;
+    gap: var(--gap-spacing-5);
 }
 
 .filtros{
     width: 100%;
     max-width: 350px;
-    background: linear-gradient(120deg, #F97316 5%, #E69A72 15%, #C9B18C 25%,#6D9991 40%, #0F766E 100%);
-    padding: 8px;
-    box-shadow: 0px 0px 10px #0000002c;
-    border-radius: 8px;
+    background: var(--degrade-praia);
+    padding: var(--padding-spacing-3);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--radius-2);
     margin: 0 auto;
 }
 
@@ -448,7 +449,7 @@ a.btn-destino:hover{
     color: var(--cor-branca);
     content: "+";
     display: inline-block;
-    margin-right: 5px;
+    margin-right: var(--margin-spacing-1);
     font-size: 1.9rem;
     font-weight: 300;
     line-height: 1;
@@ -461,10 +462,10 @@ a.btn-destino:hover{
 .opc-filtro {
     width: 100%;
     max-width: 100%;
-    margin: 10px 0;
+    margin: var(--margin-spacing-7);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap-spacing-4);
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity .5s ease, transform .5s ease;
@@ -480,32 +481,32 @@ a.btn-destino:hover{
     margin: 0 auto;
     width: 100%;
     max-width: 300px;
-    background-color: #ffffff33;
+    background-color: var(--cor-vidro);
     font-family: var(--fonte-texto);
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 10px;
+    padding: var(--padding-spacing-4);
     color: var(--cor-branca);
-    border: 2px solid #ffffff4d;
-    border-radius: 10px;
+    border: var(--border-filtro);
+    border-radius: var(--radius-3);
     transition: background-color .1s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-3);
 }
 
 .btn-filtro:hover{
-    background-color: #ffffff4d;
+    background-color: var(--cor-vidro-hover);
 }
 
 .carrossel{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 10px 0px 20px 0;
+    gap: var(--gap-spacing-1);
+    margin: var(--margin-spacing-14);
 }
 
 .seta{
-    background-image: linear-gradient(to bottom, var(--cor-fundo), #777777, #777777, var(--cor-fundo));
+    background-image: var(--degrade-botao);
     border: none;
     width: 40px;
     min-height: 550px;
@@ -518,15 +519,15 @@ a.btn-destino:hover{
     align-items: center;
     width: 100%;
     overflow: hidden;
-    background-color: #ffffff00;
+    background-color: transparent;
     min-height: 520px;
-    padding: 10px;
+    padding: var(--padding-spacing-4);
 }
 
 .cards {
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: var(--gap-spacing-5);
     transition: transform .9s ease;
 }
 
@@ -534,8 +535,8 @@ a.btn-destino:hover{
     width: 92%;
     max-width: 350px;
     background-color: var(--cor-branca);
-    box-shadow: 0px 0px 10px #0000004f;
-    border-radius: 20px;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-5);
     flex-shrink: 0;
 }
 
@@ -547,8 +548,8 @@ a.btn-destino:hover{
     position: absolute;
     color: var(--cor-branca);
     font-size: 1rem;
-    border-radius: 5px;
-    padding: 4px 8px;
+    border-radius: var(--radius-1);
+    padding: var(--padding-spacing-7);
     top: 10px;
     left: 10px;
     letter-spacing: 1px;
@@ -562,14 +563,14 @@ a.btn-destino:hover{
 
 .especial::before{
     content: 'Oferta especial';
-    background-color: #0db60d;
+    background-color: var(--cor-especial);
 }
 
 .ilustracao{
     width: 100%;
     height: 200px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px #00000031;
+    border-radius: var(--radius-5);
+    box-shadow: var(--shadow-4);
     object-fit: cover;
 }
 
@@ -588,11 +589,11 @@ a.btn-destino:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
-    border-radius: 15px;
+    padding: var(--padding-spacing-2);
+    border-radius: var(--radius-4);
     border: none;
     background-color: var(--cor-branca);
-    box-shadow: 0px 0px 10px #00000048;
+    box-shadow: var(--shadow-2);
 }
 
 .like img{
@@ -600,7 +601,7 @@ a.btn-destino:hover{
 }
 
 .inform{
-    padding: 15px;
+    padding: var(--padding-spacing-6);
 }
 
 .inform h2{
@@ -611,30 +612,30 @@ a.btn-destino:hover{
 .inform p{
     font-size: 1.2rem;
     font-weight: 500;
-    margin: 10px 0;
+    margin: var(--margin-spacing-7);
     line-height: 1.3;
 }
 
 p.estrelas span{
-    color: #ffcc00;
+    color: var(--cor-estrelas);
     font-size: 1.6rem;
     font-weight: 600;
 }
 
 p.estrelas {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: var(--margin-spacing-2);
 }
 
 p.cat{
-    margin: 8px 0;
+    margin: var(--margin-spacing-6);
     letter-spacing: 1px;
     font-weight: 500;
     font-size: 1.1rem;
 }
 
 p.cat-verde{
-    color: #0db60d;
+    color: var(--cor-especial);
 }
 
 p.cat-laran{
@@ -644,16 +645,16 @@ p.cat-laran{
 .lista{
     display: block;
     width: 100%;
-    margin: 20px auto 5px auto;
-    padding: 16px 8px;
+    margin: var(--margin-spacing-19);
+    padding: var(--padding-spacing-13);
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--cor-secundaria);
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
-    border: 2px solid var(--cor-secundaria);
-    box-shadow: 5px 5px 10px #0f766d2c;
-    border-radius: 10px;
+    border: var(--border-secundaria);
+    box-shadow: var(--shadow-8);
+    border-radius: var(--radius-3);
     transition: transform .2s, box-shadow .2s;
 }
 
@@ -676,13 +677,13 @@ p.cat-laran{
 footer{
     width: 100%;
     background-color: var(--cor-fundo-rodape);
-    border-top: 2px solid var(--cor-borda);
-    padding: 15px;
+    border-top: var(--border-princi);
+    padding: var(--padding-spacing-6);
 }
 
 footer h3 {
     color: var(--cor-branca);
-    margin-bottom: 10px;
+    margin-bottom: var(--margin-spacing-2);
 }
 
 footer a, footer p{
@@ -694,7 +695,7 @@ footer a, footer p{
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 30px;
+    gap: var(--gap-spacing-6);
 }
 
 .logo-rodape{
@@ -710,14 +711,13 @@ footer a, footer p{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin: 10px 0 5px 0;
+    gap: var(--gap-spacing-3);
+    margin: var(--margin-spacing-13);
 }
 
 .logo-rod-txt p{
     font-family: var(--fonte-titulo);
     color: var(--cor-branca);
-    
 }
 
 .glo span{
@@ -725,7 +725,7 @@ footer a, footer p{
 }
 
 .redes{
-    margin: 20px 0 10px 0;
+    margin: var(--margin-spacing-16);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -733,13 +733,13 @@ footer a, footer p{
 
 .redes li{
     display: flex;
-    border-radius: 50%;
+    border-radius: var(--radius-7);
 }
 
 .redes a{
-    border-radius: 50%;
-    padding: 10px;
-    border: 2px solid var(--cor-branca);
+    border-radius: var(--radius-7);
+    padding: var(--padding-spacing-4);
+    border: var(--border-branca);
     transition: transform .2s;
 }
 
@@ -752,19 +752,18 @@ footer a, footer p{
 }
 
 .navega li{
-    margin: 5px 0;
-    padding: 5px 5px 5px 0px;
+    margin: var(--margin-spacing-5);
+    padding: var(--padding-spacing-15);
 }
 
 .navega a{
-    padding: 5px 5px 5px 0px;
+    padding: var(--padding-spacing-15);
     width: 100%;
 }
 
 .oferta{
     max-width: 400px;
     margin: auto;
-  
 }
 
 .oferta h3, .oferta p{
@@ -772,7 +771,7 @@ footer a, footer p{
 }
 
 .oferta p{
-    margin-bottom: 20px;
+    margin-bottom: var(--margin-spacing-4);
 }
 
 form{
@@ -780,28 +779,28 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap-spacing-5);
 }
 
 #iemail{
     color: var(--cor-branca);
     width: 100%;
-    padding: 10px 5px 5px 5px;
+    padding: var(--padding-spacing-16);
     max-width: 350px;
     font-size: 1.14rem;
     font-weight: 500;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    border-bottom: 2px solid var(--cor-branca);
+    border: var(--border-transparete);
+    border-radius: var(--radius-1);
+    border-bottom: var(--border-branca);
     background-color: var(--cor-txt);
     transition: border .5s, background-color .5s, border-radius .5s;
 }
 
 #iemail:focus{
     outline: none;
-    border: 2px solid var(--cor-branca);
+    border: var(--border-branca);
     background-color: var(--cor-fundo-input);
-    border-radius: 8px;
+    border-radius: var(--radius-2);
 }
 
 input::placeholder{
@@ -814,10 +813,10 @@ input::placeholder{
     border: none;
     background-color: var(--cor-primaria);
     color: var(--cor-branca);
-    padding: 12px;
+    padding: var(--padding-spacing-5);
     font-size: 1.2rem;
     font-weight: 500;
-    border-radius: 15px;
+    border-radius: var(--radius-4);
     letter-spacing: 2px;
     transition: transform .3s, background-color .3s;
 }
@@ -828,13 +827,13 @@ input::placeholder{
 }
 
 .rodape-copy{
-    margin: 30px 0 10px 0;
+    margin: var(--margin-spacing-18);
     text-align: center;
-    border-top: 2px solid var(--cor-borda);
+    border-top: var(--border-princi);
 }
 
 .rodape-copy p{
     color: var(--cor-branca);
-    margin-top: 15px;
+    margin-top: var(--margin-spacing-3);
 }
 /* ========== Fim do rodape da pagina ========== */
